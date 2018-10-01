@@ -24,13 +24,13 @@ curl https://codeload.github.com/bBoxType/FiraSans/zip/master -o $(pwd)/master.z
 echo "Instalando as fontes..."
 unzip $(pwd)/master.zip
 
-mkdir -p /usr/share/fonts/opentype/fira_code
-mkdir -p /usr/share/fonts/opentype/fira_mono
+mkdir -p /usr/share/fonts/opentype/fira_code && \
+mkdir -p /usr/share/fonts/opentype/fira_mono && \
 mkdir -p /usr/share/fonts/opentype/fira_sans
 
-cp $(pwd)/FiraSans-master/Fira_Code_*/Fonts/FiraCode_OTF_*/**/* /usr/share/fonts/opentype/fira_code
-cp $(pwd)/FiraSans-master/Fira_Mono_*/Fonts/FiraMono_OTF_*/**/* /usr/share/fonts/opentype/fira_mono
-cp $(pwd)/FiraSans-master/Fira_Sans_*/Fonts/FiraSans_OTF_*/**/* /usr/share/fonts/opentype/fira_sans
+cp $(pwd)/FiraSans-master/Fira_Code_*/**/* /usr/share/fonts/opentype/fira_code && \
+cp $(pwd)/FiraSans-master/Fira_Mono_*/**/* /usr/share/fonts/opentype/fira_mono && \
+cp $(pwd)/FiraSans-master/Fira_Sans_*/**/* /usr/share/fonts/opentype/fira_sans
 
 echo "Limpando a sujeira..."
 rm $(pwd)/master.zip
