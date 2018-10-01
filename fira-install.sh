@@ -18,7 +18,7 @@ fi
 echo "Baixando o pacote de fontes..."
 
 # Faz o download do arquivo da fonte direta dos criadores da fonte Fira.
-curl https://codeload.github.com/bBoxType/FiraSans/zip/master -o $(pwd)/master.zip -s
+curl https://codeload.github.com/bBoxType/FiraSans/zip/master -o $(pwd)/master.zip -s --progress-bar
 
 # Verifica se o Unzip está instalado...
 echo "Instalando as fontes..."
