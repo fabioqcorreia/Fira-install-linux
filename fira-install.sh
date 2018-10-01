@@ -18,27 +18,22 @@ fi
 echo "Baixando o pacote de fontes..."
 
 # Faz o download do arquivo da fonte direta dos criadores da fonte Fira.
-curl https://codeload.github.com/bBoxType/FiraSans/zip/master -o /home/$USER/master.zip -s
+curl https://codeload.github.com/bBoxType/FiraSans/zip/master -o $(pwd)/master.zip -s
 
 # Verifica se o Unzip está instalado...
 echo "Instalando as fontes..."
-unzip /home/$USER/master.zip
+unzip $(pwd)/master.zip
 
 mkdir -p /usr/share/fonts/opentype/fira_code
 mkdir -p /usr/share/fonts/opentype/fira_mono
 mkdir -p /usr/share/fonts/opentype/fira_sans
 
-cp /home/$USER/master/Fira_Code_3_2/Fonts/FiraCode_OTF_32/* /usr/share/fonts/opentype/fira_code
-cp /home/$USER/master/Fira_Mono_3_2/Fonts/FiraMono_OTF_32/* /usr/share/fonts/opentype/fira_mono
-cp /home/$USER/master/Fira_Sans_4_2/Fonts/FiraSans_OTF_4203/Compressed/Roman/* /usr/share/fonts/opentype/fira_sans
-cp /home/$USER/master/Fira_Sans_4_2/Fonts/FiraSans_OTF_4203/Compressed/Italic/* /usr/share/fonts/opentype/fira_sans
-cp /home/$USER/master/Fira_Sans_4_2/Fonts/FiraSans_OTF_4203/Condensed/Roman/* /usr/share/fonts/opentype/fira_sans
-cp /home/$USER/master/Fira_Sans_4_2/Fonts/FiraSans_OTF_4203/Condensed/Italic/* /usr/share/fonts/opentype/fira_sans
-cp /home/$USER/master/Fira_Sans_4_2/Fonts/FiraSans_OTF_4203/Normal/Roman/* /usr/share/fonts/opentype/fira_sans
-cp /home/$USER/master/Fira_Sans_4_2/Fonts/FiraSans_OTF_4203/Normal/Italic/* /usr/share/fonts/opentype/fira_sans
+cp $(pwd)/FiraSans-master/Fira_Code_*/Fonts/FiraCode_OTF_*/**/* /usr/share/fonts/opentype/fira_code
+cp $(pwd)/FiraSans-master/Fira_Mono_*/Fonts/FiraMono_OTF_*/**/* /usr/share/fonts/opentype/fira_mono
+cp $(pwd)/FiraSans-master/Fira_Sans_*/Fonts/FiraSans_OTF_*/**/* /usr/share/fonts/opentype/fira_sans
 
 echo "Limpando a sujeira..."
-rm /home/$USER/master.zip
-rm -r /home/$USER/master
+rm $(pwd)/master.zip
+rm -r $(pwd)/FiraSans-master
 
 echo "Feito!"
