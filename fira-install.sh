@@ -28,9 +28,9 @@ mkdir -p /usr/share/fonts/opentype/fira_code && \
 mkdir -p /usr/share/fonts/opentype/fira_mono && \
 mkdir -p /usr/share/fonts/opentype/fira_sans
 
-cp $(pwd)/FiraSans-master/Fira_Code_*/**/* /usr/share/fonts/opentype/fira_code && \
-cp $(pwd)/FiraSans-master/Fira_Mono_*/**/* /usr/share/fonts/opentype/fira_mono && \
-cp $(pwd)/FiraSans-master/Fira_Sans_*/**/* /usr/share/fonts/opentype/fira_sans
+cp -r $(pwd)/FiraSans-master/Fira_Code_*/**/* /usr/share/fonts/opentype/fira_code && \
+cp -r $(pwd)/FiraSans-master/Fira_Mono_*/**/* /usr/share/fonts/opentype/fira_mono && \
+cp -r $(pwd)/FiraSans-master/Fira_Sans_*/**/* /usr/share/fonts/opentype/fira_sans
 
 echo "Limpando a sujeira..."
 rm $(pwd)/master.zip
