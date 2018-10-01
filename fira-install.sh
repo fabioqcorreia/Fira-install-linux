@@ -1,4 +1,4 @@
-!#	/bin/sh
+#! /bin/sh
 
 # Verifica se o curl está instalado e instala caso não estiver...
 echo "Verificando dependências..."
