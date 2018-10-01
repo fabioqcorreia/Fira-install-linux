@@ -6,13 +6,13 @@ echo "Verificando dependências..."
 if ! which curl
 then
     apt-get update -qq
-    apt-get install curl
+    apt-get install curl -y
 fi
 
 if ! which unzip
 then
     apt-get update -qq
-    apt-get install unzip
+    apt-get install unzip -y
 fi
 
 echo "Baixando o pacote de fontes..."
